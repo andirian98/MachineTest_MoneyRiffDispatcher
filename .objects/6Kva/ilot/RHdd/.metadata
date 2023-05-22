@@ -1,0 +1,12 @@
+﻿{
+  "Id": "RHddqhHWu0a8RnsCtc-k1w",
+  "Reference": "Yb0sJeOmS02gblwthK0DOQ/RHddqhHWu0a8RnsCtc-k1w",
+  "ParentRef": "Yb0sJeOmS02gblwthK0DOQ/ilotym49SEGtQdJk_ycVtQ",
+  "Name": "Chrome: Top 25 mutual funds (annual). Search ",
+  "Type": "Screen",
+  "Created": "2023-02-07T08:30:21.83964Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.1.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-02-07T08:30:21.83964Z"
+}

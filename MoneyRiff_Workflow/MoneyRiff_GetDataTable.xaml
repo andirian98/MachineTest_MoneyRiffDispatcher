@@ -1,0 +1,222 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="MoneyRiff_GetDataTable" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_ExtractDataTable" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_MoneyRiffLink" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>604,1592</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>MoneyRiff_GetDataTable_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="78">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="MoneyRiff_GetDataTable" sap:VirtualizedContainerService.HintSize="614,1527" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="money_rediff_link" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="572,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[money_rediff_link]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_MoneyRiffLink]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome: Top 25 mutual funds (annual). Search" sap:VirtualizedContainerService.HintSize="572,1317" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="3cc9d518-2cc7-4534-8253-25b33a453e33" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,1100" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="496,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NClick ClickType="Single" DisplayName="Click Option High risk" sap:VirtualizedContainerService.HintSize="496,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3cc9d518-2cc7-4534-8253-25b33a453e33" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://money.rediff.com/mutual-funds" ContentHash="rdMR5IybbkinHNh73KYiJg" DesignTimeRectangle="0, 0, 0, 0" DesignTimeScaleFactor="1" ElementType="RadioButton" FriendlyName="'High risk, high-returns'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' tableCol='1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='radio' tag='INPUT' class='' aaname='' /&gt;" Guid="a393e5ec-57aa-41d5-a306-c7a6a74dfe3c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAMSURBVBhXY0ADDAwAABIAAaMn47oAAAAASUVORK5CYII=" InformativeScreenshot="f9bb36436168a7b264042edfa09c7583.png" Reference="Yb0sJeOmS02gblwthK0DOQ/mF2FsDZy4U6irAX1wFFj4w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Top 25 mutual funds (annual). Search and find Indian mutual funds : BSE, NSE, Stock quotes, share market, stock market, stock tips: Rediff Stocks' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="580, 449, 216, 26" FriendlyName="'High risk, high-returns'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' tableCol='1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname=' High risk, high-returns' check:innerText='High risk, high-returns' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANwAAAAeCAYAAABHenA+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAScSURBVHhe7ZvZTuswEEDzG/e3KvErvIP6yleg8MZvgMQL+1Zx2coOYl/EOjfjZJKxMwlJ43KBzJFGjV07ttM5WQoNQFG+CR8fH6Xx/v5uxdvbm4nX11d4eXlJ4/n52cTT05OJx8dHeHh4gPv7e7i7u4Pb21u4ubmBq6sruLy8hIuLCzg/P4fT01M4OTmBo6MjODw8hH6/D3t7e7C9vQ1bW1vQ6/VgY2MD1tbWYGVlBZaWlmBhYQH+jC4lK7DZ7P1NtjJUOOXbIEnGQ4VTFI9IkvFQ4RTFI5JkPFQ4RfGIJBkPFU5RPCJJxkOFUxSPSJLxaJVw6+vrMDk5CWNjYzA6OmpesYz1iuIDSTIerRFuenoaJiYmYG5uzkwUwVcsYz2+ryhNkSTj0QrhUKYwDJOSDL6v0ilNkSTj8euFw9tFvIJVAdvp7aXSBEkyHr9eOHxGw9vGKmA7bG/RD6ETdCDsJ+WEmfEAOlPHue1CZrsQjITwSas8FfpVGt/iGMKRALqzSZFTaZ4l/RtwPNWBYHwmKf1MJMkoXNmaCnd9fW2iSLiDgwPY39+H3d1d2NnZSYXb3NxMhVtcXIT5+Xl/wuEXI/TM9hnYDttbVBCuEoMKVwGvwlVChStCEo2iFcLht5F1yLWvfYWbgW4QQIAx3o22k76JcGHU1rwXdKOWAqZdJxozaoOCclHNXKh/Nidr/KRNuQyJMFPZ/tL+1okhbmfGG4nWkkpW0t/FXQ/VJf3EOpTOmocto1lvtE8a15SjY50eG9bP2m/RMfeIJBpFK4T7iiucu02JYZKECxd96DxhxbO5acfGSxPPuapgPU9AHN/MtUpSJeNbyW6fGLDezN9q48xf6u/ivmcdT/s4WFc4Ng/EFY6/Z8q0buuEgye/bGzcR+GJwROSaBStEM7PMxx+oPnIC2d/wFbZJF4mg5VcHKddlniOcIx4/NAZu4x4X1nyOfMUx+Plkv4u0rqZLNl4zjFh9UhOOHbs7DKfZ8m8hoQkGkUrhGv8LWWdK1yurZTIMaXCFSRkvD8SPktik3BROYz2mUlQhiuTNM94rDLh8v3jeuuEJK07XQNFvJY6wvF12mVnbvyEyY/rkJBEo2iFcEijv8PVEY4nrkFK5JjBhGOw+uLxi6ginNuGl0v6u1Rdd0SZcLjGgYRjlI3tC0k0itYIh6BMeAXD20Z6psNXLGN94R+9awlnJ4b5gL0J5yQ11gsJWC2pqgiX7IvmgvXRVaKpcO7xNMeLj0dzN+NRO9z/AMKZsezbWd5vGEiiUbRKOARvF/EZDb8Yqfy/lDWFS5MjCuu5ykm8+sIl28m+3VtKKeGK5asmHLUz442HrE8D4ZCCdaT1TCxqg7fLtYXDEvajsdx5DAFJNIrWCfflmARiCfXlRCKIwg1AwYlHsZFEo1DhvMOuCCb+c4JGwmdXofpkV5g4muyrLUiiUahwiuIZSTQKFU5RPCOJRqHCKYpnJNEoVDhF8YwkGoUv4VA2Eo7/POfs7MzIJglHP89B2fDnOaurq7C8vKzCKT8bSTQKFU5RPCOJRqHCKYpnJNEoVDhF8YwkGsXvEA7gH6q5DK6yjZBnAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="496,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3cc9d518-2cc7-4534-8253-25b33a453e33" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://money.rediff.com/mutual-funds" ContentHash="w-i8Aq-E8E2i8cToePh5fA" DesignTimeRectangle="585, 632, 41, 18" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' tableCol='1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='' tag='INPUT' type='button' aaname='Submit' check:text='Submit' /&gt;" Guid="3fa3c431-b988-485a-a71a-7223a7516819" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAWCAYAAABUpxX0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFNSURBVFhH7ZddDoIwDMd3QRJOw4PhGjyNk2A4hg87AY87Ql23thQyQQ0aZlzyj9N+7NdSCBoocJUNPU0TdF0HTdOcTsiFfLwEGg3jOIL3/nRCLuTjJdBYUS7gLEI+Xr8D7foKjDGiqneLBHk5sLWB9pqzPalrC6a24MI+MlwGsW1CJ+AWBnL2foD2KfADoJVegh4uobvKGRUTUAfQPhegQWnfW6jWV4g6aDF3tIWm3B77OfwkG7NsQsdAdCbIBDdrD1quUoSqwN7CnnJm/aJN7d8ZDw0j1aoC9qBnm/LVYOscsbhDoJfCQzjBHnTaz3EC/ajwI6BtTZeUnKNUsiV0uknznVbfPw2tb7oUkA7XnRY7HrKeVbatZ/qT0KgYwPOMUsHc3fR7eCLISNB4qKeHjMob0NwQPnsX+oz6Q39LWegiX02L/BNQ0ioQGuAOgV4nAxvlnbwAAAAASUVORK5CYII=" InformativeScreenshot="09d611c737cfa5575c5e7f325dcc886b.png" Reference="Yb0sJeOmS02gblwthK0DOQ/UkhQYF98ZUerdH_imNFocA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Top 25 mutual funds (annual). Search and find Indian mutual funds : BSE, NSE, Stock quotes, share market, stock market, stock tips: Rediff Stocks' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="585, 508, 206, 16" ElementType="Text" FriendlyName="'Simple'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' tableCol='1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='f14 bold' aaname='Simple' check:innerText='Simple' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANIAAAAUCAYAAAD4KGPrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVHhe7ZhriuJAFEazjdlWwK3MAsStxKXYf2VEREVFggbfL0TxdacrSSVf4s102km3lH0PnB8mHSsN91CFFgnCE7jdbv/0er0mvFwuvufz2fd0OkUej0ffw+Hgu9/vfXe7HW23W9psNrRer2m5XNJisaD5fE7T6ZQmkwl5nkfj8Zhc16XhcEiDwYD6/T51u11qt9vUarWo2WxSo9Gger1Ov37/Cf+DJBKS8BS4eFAJSRBywMWDSkiCkAMuHlRCEoQccPGgxofkVW2yLCvSrnrhnXdch2x1veQQXC2W71hDeDpcPKjZIb1VEhGxMX01EtKPgIsHNTqkWjkIp/IWXtBh6aFOD7m+X3bIKQXPWlaFanjvXQwxWqMafhc+o2BCSu6SNjlueEMwFi4e1OiQ4oGFwUayQkpbsiESZTz8OqQ7M2JNHzUDM95PMAYuHtTokKIhRsswspkhhYMNzwe7mhftVHqXi0KKvrdGFf+ZMLbEGvp5CCdc81uPm0LhcPGgRYe0Wq18VUiz2SwR0mg0SoTU6/Wo0+n8348N8WCDGbtFfLRLRxEPfvq4GHxOHs/0ruP/TWIN5l20GLhgHFw86AuEBEQ7DrdbwP1PhxR/VjwUkn4HwUi4eFCDQ9LHKNwtUtcKDOnho53wEnDxoAaHFO8Md+pwigwpbcYaWe+EO5pgHlw8qNEhKe4GVw+4osCQHv/5W35oeAW4eFDjQ/pq0mEJPxMuHlRC+gAJSVBw8aAS0gdISIKCiweVkAQhB1w8qIQkCDng4kHNConoL8gbSFLPHEWtAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="496,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,245" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[out_ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Company' ReferenceName='Company' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Scheme' ReferenceName='Scheme' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Class' ReferenceName='Class' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Plan' ReferenceName='Plan' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Type' ReferenceName='Type' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Returns(%)' ReferenceName='Returns(%)' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Company' attr='text' /&gt;&lt;column name='Scheme' attr='text' /&gt;&lt;column name='Class' attr='text' /&gt;&lt;column name='Plan' attr='text' /&gt;&lt;column name='Type' attr='text' /&gt;&lt;column name='Returns(%)' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="358,157" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="3cc9d518-2cc7-4534-8253-25b33a453e33" Version="V3">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="188, 375, 620, 1123" DesignTimeScaleFactor="1" FriendlyName="'CompanySchemeClassPlanT…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="87dd3f62-a92d-4274-8e47-f5607c201b16" InformativeScreenshot="db3e353be8e9a3839bdafc4819bf12b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Top Performers from high-risk, high-returns category Mutual Funds. Search and find Indian mutual funds on Rediff MF selector' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="496,457" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'TopPerfor Page'" sap:VirtualizedContainerService.HintSize="434,342" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="c7fabba35605efbd5cc4fa00398a53b4" Selector="&lt;html app='chrome.exe' title='Top Performers from high-risk, high-returns category Mutual Funds. Search and find Indian mutual funds on Rediff MF selector' /&gt;">
+                <ui:BrowserScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,195" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[out_ExtractDataTable]" DisplayName="Extract Structured Data 'TBODY'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;/row&gt;&lt;column exact='1' name='Scheme' attr='text' name2='Scheme_Link' attr2='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Company' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Class' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Plan' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;/column&gt;&lt;column exact='1' name='Type' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='5' /&gt;&lt;/column&gt;&lt;column exact='1' name='Returns(%)' attr='text'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='6' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="358,107" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" SimulateClick="True">
+                        <ui:ExtractData.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c58483f3-0022-47ea-80c4-95db73af81b8" InformativeScreenshot="1ae6f55ae0fb1b8494409734d904c2b6" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:ExtractData.Target>
+                      </ui:ExtractData>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:BrowserScope.Body>
+              </ui:BrowserScope>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="SQIE5pNTgEWRg-_tZutu2g" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVFhH7Ze9isJAFIWnyTMkhb02YiPYWPoSvoAvYGHto/godqvZdcFCdgkbEAJWVgFht7k7R4zcyc71Z5nRZg6cMEzuz8edFBNFTFEUURzHlCSJF6M2enCdAZQyWLyK9zquHtm8UtVT1UcCveiXr46NmnWht8K5cC104NqTUZsLvRU+jkqgtCW6NJ8EehsAGJUtyaXRo9JdAD/bLZVpavg7yyhrt88x79rFaET72YzK1YrKzYaK8dio8y8AnlRX3unQUr/fTSanHVPYl2o5Afjq9+mgpyPJO8A1BYDddCrWcgJQzudUDIeU93qUnmJhrLNWiz4aDbGWE4DPZtOaI9k5QN7tWnMkB4AAEAACQAC4CHDpUiopHwys8ZL/XEpvvZa/aYOeG3u2WMnWa/nTf0yweOqv2fGp9UgI3svoipHgXPBx+DBqm0dO9Aty/IHYsE2V1gAAAABJRU5ErkJggg==" InformativeScreenshot="f2806f2ab641f846b3ce0b15fddba635.jpg" Reference="Yb0sJeOmS02gblwthK0DOQ/RHddqhHWu0a8RnsCtc-k1w" Selector="&lt;html app='chrome.exe' title='Top 25 mutual funds (annual). Search and find Indian mutual funds : BSE, NSE, Stock quotes, share market, stock market, stock tips: Rediff Stocks' /&gt;" Url="[money_rediff_link]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

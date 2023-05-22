@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="SQIE5pNTgEWRg-_tZutu2g" Reference="Yb0sJeOmS02gblwthK0DOQ/RHddqhHWu0a8RnsCtc-k1w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="gV8Yn1DgT06dBVOHWWqD3A" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVFhH7Ze9isJAFIWnyTMkhb02YiPYWPoSvoAvYGHto/godqvZdcFCdgkbEAJWVgFht7k7R4zcyc71Z5nRZg6cMEzuz8edFBNFTFEUURzHlCSJF6M2enCdAZQyWLyK9zquHtm8UtVT1UcCveiXr46NmnWht8K5cC104NqTUZsLvRU+jkqgtCW6NJ8EehsAGJUtyaXRo9JdAD/bLZVpavg7yyhrt88x79rFaET72YzK1YrKzYaK8dio8y8AnlRX3unQUr/fTSanHVPYl2o5Afjq9+mgpyPJO8A1BYDddCrWcgJQzudUDIeU93qUnmJhrLNWiz4aDbGWE4DPZtOaI9k5QN7tWnMkB4AAEAACQAC4CHDpUiopHwys8ZL/XEpvvZa/aYOeG3u2WMnWa/nTf0yweOqv2fGp9UgI3svoipHgXPBx+DBqm0dO9Aty/IHYsE2V1gAAAABJRU5ErkJggg==" Reference="Yb0sJeOmS02gblwthK0DOQ/RHddqhHWu0a8RnsCtc-k1w" Selector="&lt;html app='chrome.exe' title='Top 25 mutual funds (annual). Search and find Indian mutual funds : BSE, NSE, Stock quotes, share market, stock market, stock tips: Rediff Stocks' /&gt;" Url="[money_rediff_link]">
+      <imageRef attrName="InformativeScreenshot" originalValue="f2806f2ab641f846b3ce0b15fddba635.jpg" xmlns="">0t03cHU6cHESSnfxenpOH-Q</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="money_rediff_link" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
